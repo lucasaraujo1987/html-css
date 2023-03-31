@@ -29,7 +29,6 @@ main{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
     overflow: hidden;
     background-color: white;
     width: 250px;
@@ -38,6 +37,7 @@ main{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
     transition: width .3s, height .3s;
     transition-timing-function: ease;
+    transform: translate(-50%,-50%);
 }
 
 #login > #imagem{
@@ -70,7 +70,8 @@ input[type=submit]{
     background-color: #49a09d;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 input[type=submit]:hover{
@@ -81,9 +82,32 @@ input[type=submit]:hover{
     display: none;
 }
 
+.campo > i{
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+.campo > input{
+    background-color: #82e7e3;
+    font-size: 1em;
+    width: calc(100% - 46px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-13px);
+}
+
+.campo > input:focus-within{
+    background-color: white;
+}
+
 .campo{
     background-color: #5f2c82;
     width: 100%;
+    border: 2px solid #5f2c82;
     height: 40px;
     display: block;
     border-radius: 5px;
